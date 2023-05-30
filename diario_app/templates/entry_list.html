@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diário</title>
+</head>
+<body>
+    <h1>Diário</h1>
+    <ul>
+        {% for entry in entries %}
+            <li>{{ entry.title }}</li>
+        {% empty %}
+            <li>Nenhuma entrada encontrada.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_entry' %}">Criar nova entrada</a>
+</body>
+</html>

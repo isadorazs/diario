@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar nova entrada</title>
+</head>
+<body>
+    <h1>Criar nova entrada</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Título:</label>
+        <input type="text" name="title" required><br>
+        <label for="content">Conteúdo:</label>
+        <textarea name="content" required></textarea><br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
